@@ -1,3 +1,37 @@
-<p>
-  login works!
-</p>
+<div class="page login-page">
+  <div class="container d-flex align-items-center">
+    <div class="form-holder has-shadow">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="info d-flex align-items-center">
+            <div class="content">
+              <div class="logo">
+                <h1>{{title}}</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 bg-white">
+          <div class="form d-flex align-items-center">
+            <div class="content">
+              <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+                <div class="form-group">
+                  <input type="text" formControlName="email" class="input-material" required>
+                  <label for="email" class="label-material">Email</label>
+                </div>
+                <div class="form-group">
+                  <input type="password" formControlName="password" class="input-material" required>
+                  <label for="password" class="label-material">Password</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyrights text-center">
+    <p>Develope by <a href="https://fixbugdao.githib.io" class="external">Phuong Nguyen</a></p>
+  </div>
+</div>

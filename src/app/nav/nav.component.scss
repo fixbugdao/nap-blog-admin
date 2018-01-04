@@ -37,46 +37,55 @@
             margin: 4px auto 0;
             -webkit-transition: all 0.3s cubic-bezier(0.81, -0.33, 0.345, 1.375);
             transition: all 0.3s cubic-bezier(0.81, -0.33, 0.345, 1.375);
+
+            &:nth-of-type(2) {
+                position: relative;
+                width: 35px;
+                -webkit-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+            }
         }
     }
 
     .menu-btn.active {
-        span:first-of-type {
+        span{
+            &:first-of-type {
             -webkit-transform: translateY(12px);
             transform: translateY(12px);
-        }
-
-        span:nth-of-type(2) {
-            -webkit-transform: none;
-            transform: none;
-
-            &:before, &:after {
-                content: '';
-                width: 6px;
-                height: 2px;
-                display: block;
-                background: #fff;
-                -webkit-transform: rotate(45deg);
-                transform: rotate(45deg);
-                position: absolute;
-                top: 2px;
-                left: 0;
-                -webkit-transition: all 0.7s;
-                transition: all 0.7s;
             }
 
-            &:after {
-                -webkit-transform: rotate(145deg);
-                transform: rotate(145deg);
-                position: absolute;
-                top: -2px;
-                left: 0;
+            &:last-of-type {
+                -webkit-transform: translateY(-12px);
+                transform: translateY(-12px);
             }
-        }
 
-        span:last-of-type {
-            -webkit-transform: translateY(-12px);
-            transform: translateY(-12px);
+            &:nth-of-type(2) {
+                -webkit-transform: none;
+                transform: none;
+    
+                &::before, &::after {
+                    content: '';
+                    width: 6px;
+                    height: 2px;
+                    display: block;
+                    background: #fff;
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    position: absolute;
+                    top: 2px;
+                    left: 0;
+                    -webkit-transition: all 0.7s;
+                    transition: all 0.7s;
+                }
+    
+                &::after {
+                    -webkit-transform: rotate(145deg);
+                    transform: rotate(145deg);
+                    position: absolute;
+                    top: -2px;
+                    left: 0;
+                }
+            }
         }
     }
 

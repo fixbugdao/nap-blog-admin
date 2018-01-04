@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-login-layout',
   template: `<router-outlet></router-outlet>`,
   styles: []
 })
-export class AppComponent {
-  title = 'app';
+export class LoginLayoutComponent {
+
+  constructor() { }
+
 }
