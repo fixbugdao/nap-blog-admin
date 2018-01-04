@@ -1,0 +1,15 @@
+.page {
+    overflow-x: hidden;
+    background: #EEF5F9;
+}
+
+.content-inner {
+    position: relative;
+    width: calc(100% - 250px);
+    min-height: calc(100vh - 70px);
+    padding-bottom: 60px;
+}
+
+.container-fluid {
+    padding: 0 30px;
+}

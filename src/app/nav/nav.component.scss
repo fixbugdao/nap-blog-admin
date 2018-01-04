@@ -1,0 +1,106 @@
+.navbar {
+    background: #2f333e;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #fff;
+    position: relative;
+    border-radius: 0;
+    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    padding-left: 0;
+    padding-right: 0;
+    
+    .container-fluid {
+        width: 100%;
+    }
+
+    .navbar-holder {
+        width: 100%;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    .menu-btn {
+        margin-right: 20px;
+        font-size: 1.2em;
+        -webkit-transition: all 0.7s;
+        transition: all 0.7s;
+
+        span {
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            display: block;
+            margin: 4px auto 0;
+            -webkit-transition: all 0.3s cubic-bezier(0.81, -0.33, 0.345, 1.375);
+            transition: all 0.3s cubic-bezier(0.81, -0.33, 0.345, 1.375);
+        }
+    }
+
+    .menu-btn.active {
+        span:first-of-type {
+            -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+        }
+
+        span:nth-of-type(2) {
+            -webkit-transform: none;
+            transform: none;
+
+            &:before, &:after {
+                content: '';
+                width: 6px;
+                height: 2px;
+                display: block;
+                background: #fff;
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+                position: absolute;
+                top: 2px;
+                left: 0;
+                -webkit-transition: all 0.7s;
+                transition: all 0.7s;
+            }
+
+            &:after {
+                -webkit-transform: rotate(145deg);
+                transform: rotate(145deg);
+                position: absolute;
+                top: -2px;
+                left: 0;
+            }
+        }
+
+        span:last-of-type {
+            -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+        }
+    }
+
+    .nav-item > a {
+        position: relative;
+    }
+
+    .nav-item > a.logout i {
+        margin-left: 10px;
+    }
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+
+    .brand-big {
+        display: block;
+    }
+
+    .brand-small {
+        display: none;
+    }
+}
