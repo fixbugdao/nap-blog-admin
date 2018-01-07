@@ -1,3 +1,4 @@
+import { CategoryService } from './category/category.service';
 import { AuthService } from './auth/auth.service';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
@@ -20,6 +21,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CategoryComponent } from './category/category.component';
+import { CategoriesListComponent } from './category/categories-list/categories-list.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     LoginLayoutComponent,
     AdminLayoutComponent,
+    CategoryComponent,
+    CategoriesListComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, CategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
