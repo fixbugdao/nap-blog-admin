@@ -8,7 +8,7 @@ import { Category } from '../category';
   templateUrl: './category-form.component.html',
 })
 export class CategoryFormComponent {
-  category = new Category;
+  category = new Category();
 
   constructor(private categoryService: CategoryService, private router: Router) { }
 

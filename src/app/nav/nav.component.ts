@@ -7,6 +7,7 @@ import { AuthService } from '../auth/auth.service';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
+  brand = '{NAP}';
   constructor(private authService: AuthService) { }
 
   logout() {

@@ -1,4 +1,5 @@
-import { ArticleFormComponent } from './article/article-form/article-form.component';
+import { ArticleEditComponent } from './article/article-edit/article-edit.component';
+import { ArticleCreateComponent } from './article/article-create/article-create.component';
 import { ArticlesListComponent } from './article/articles-list/articles-list.component';
 import { CategoryComponent } from './category/category.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
@@ -33,7 +34,8 @@ const routes: Routes = [
         component: ArticleComponent,
         children: [
           { path: 'index', component: ArticlesListComponent },
-          { path: 'create', component: ArticleFormComponent },
+          { path: 'create', component: ArticleCreateComponent },
+          { path: 'edit/:id', component: ArticleEditComponent },
         ]
       }
     ]

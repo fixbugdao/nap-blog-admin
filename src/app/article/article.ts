@@ -6,6 +6,6 @@ export class Article {
     categoryId: string;
     content: string;
     published: false;
-    createdDate: Date;
-    publishedDate: Date;
+    createdDate: string;
+    publishedDate: string;
 }

@@ -27,8 +27,9 @@ import { CategoriesListComponent } from './category/categories-list/categories-l
 import { CategoryFormComponent } from './category/category-form/category-form.component';
 import { ArticleComponent } from './article/article.component';
 import { ArticlesListComponent } from './article/articles-list/articles-list.component';
-import { ArticleFormComponent } from './article/article-form/article-form.component';
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+import { ArticleCreateComponent } from './article/article-create/article-create.component';
+import { ArticleEditComponent } from './article/article-edit/article-edit.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
     CategoryFormComponent,
     ArticleComponent,
     ArticlesListComponent,
-    ArticleFormComponent,
+    ArticleCreateComponent,
+    ArticleEditComponent,
   ],
   imports: [
     BrowserModule,

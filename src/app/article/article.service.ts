@@ -22,7 +22,10 @@ export class ArticleService {
   }
 
   create(article: Article) {
-    article.createdDate = new Date();
+    article.createdDate = new Date().toString();
+    if (article.published) {
+      article.publishedDate = new Date().toString();
+    }
     this.articles.push(article);
   }
 
