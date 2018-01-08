@@ -22,21 +22,21 @@
               <div class="form-group row">
                 <label class="col-sm-3 form-control-label">Name</label>
                 <div class="col-sm-4">
-                  <input type="textbox" class="form-control form-control-success" required 
-                    [(ngModel)]="category.name" #name="ngModel" name="name">
+                  <input type="textbox" class="form-control" required 
+                    [(ngModel)]="category.name" name="name">
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-sm-3 form-control-label">Index</label>
                 <div class="col-sm-1">
-                  <input type="textbox" class="form-control form-control-warning" id="index" 
+                  <input type="textbox" class="form-control" id="index" 
                     [(ngModel)]="category.index" name="index">
                 </div>
               </div>
               <div class="form-group row">
                 <label class="col-sm-3 form-control-label">Active</label>
                 <div class="col-sm-1">
-                  <input type="checkbox" class="form-control form-control-warning" id="active" 
+                  <input type="checkbox" id="active" 
                     [(ngModel)]="category.active" name="active">
                 </div>
               </div>

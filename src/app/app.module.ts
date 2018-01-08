@@ -1,3 +1,4 @@
+import { ArticleService } from './article/article.service';
 import { CategoryService } from './category/category.service';
 import { AuthService } from './auth/auth.service';
 import { RouterModule } from '@angular/router';
@@ -24,6 +25,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CategoryComponent } from './category/category.component';
 import { CategoriesListComponent } from './category/categories-list/categories-list.component';
 import { CategoryFormComponent } from './category/category-form/category-form.component';
+import { ArticleComponent } from './article/article.component';
+import { ArticlesListComponent } from './article/articles-list/articles-list.component';
+import { ArticleFormComponent } from './article/article-form/article-form.component';
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
 @NgModule({
   declarations: [
@@ -39,6 +44,9 @@ import { CategoryFormComponent } from './category/category-form/category-form.co
     CategoryComponent,
     CategoriesListComponent,
     CategoryFormComponent,
+    ArticleComponent,
+    ArticlesListComponent,
+    ArticleFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,8 +56,14 @@ import { CategoryFormComponent } from './category/category-form/category-form.co
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot()
   ],
-  providers: [AuthService, AuthGuard, CategoryService],
+  providers: [
+    AuthService,
+    AuthGuard,
+    CategoryService,
+    ArticleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
