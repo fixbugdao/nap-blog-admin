@@ -20,9 +20,10 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CategoryComponent } from './category/category.component';
 import { CategoriesListComponent } from './category/categories-list/categories-list.component';
+import { CategoryFormComponent } from './category/category-form/category-form.component';
 
 @NgModule({
   declarations: [
@@ -37,9 +38,11 @@ import { CategoriesListComponent } from './category/categories-list/categories-l
     AdminLayoutComponent,
     CategoryComponent,
     CategoriesListComponent,
+    CategoryFormComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),

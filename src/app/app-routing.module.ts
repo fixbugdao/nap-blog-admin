@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { CategoriesListComponent } from './category/categories-list/categories-list.component';
+import { CategoryFormComponent } from './category/category-form/category-form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -20,7 +21,8 @@ const routes: Routes = [
         path: 'categories',
         component: CategoryComponent,
         children: [
-          { path: 'index', component: CategoriesListComponent }
+          { path: 'index', component: CategoriesListComponent },
+          { path: 'create', component: CategoryFormComponent }
         ]
       }
     ]
