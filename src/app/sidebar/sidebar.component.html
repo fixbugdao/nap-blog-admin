@@ -9,12 +9,12 @@
         </div>
     </div>
     <ul class="list-unstyled">
-        <li routerLinkActive="active">
-            <a routerLink="/">
+        <li >
+            <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
                 <i class="fa fa-home" aria-hidden="true"></i>Dashboard</a>
         </li>
-        <li routerLinkActive="active">
-            <a routerLink="/categories/index">
+        <li>
+            <a routerLink="/categories/index" routerLinkActive="active">
                 <i class="fa fa-folder-open"></i>Categories</a>
         </li>
     </ul>
